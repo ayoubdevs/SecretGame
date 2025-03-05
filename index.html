@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔐 تحدي الرقم السري الأسطوري</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>🔐 تحدي الرقم السري</h2>
+        <input type="number" id="guess" placeholder="اكتب الرقم هنا">
+        <button class="button guess-btn" onclick="checkNumber()">جرب حظك</button>
+        <button class="button help-btn" onclick="getHint()" id="helpBtn">مساعدة</button>
+        <button class="button reset-btn" onclick="resetGame()">إعادة المحاولة</button>
+        <h3 id="message">🎯 حاول الوصول للرقم الصحيح!</h3>
+        <h3 id="attempts">💡 المحاولات المتبقية: <span id="remaining">5</span></h3>
+        <h3 id="hintMessage"></h3>
+    </div>
+    <footer>🚀 تم التطوير بواسطة <strong>PROXY CLUB</strong></footer>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+            .then(() => console.log("Service Worker Registered"));
+        }
+    </script>
+</body>
+</html>
